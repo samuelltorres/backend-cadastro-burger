@@ -1,11 +1,13 @@
 const express = require("express");
 const { req, res } = require("express");
 const { v4: uuidv4 } = require("uuid");
+const cors = require('cors')
 
 const port = 3005;
 
 const app = express();
 app.use(express.json());
+app.use(cors())
 
 const orders = [];
 
